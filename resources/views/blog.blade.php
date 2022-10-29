@@ -8,7 +8,8 @@
           <div class="col-md-5" data-aos="fade-up">
             <h1 class="mb-3 text-white">Our Blog</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
-            <!-- <a href="/reg.html" class="btn btn-primary text-white py-3 px-4"> Add your Blog</a>    -->
+           
+             <a href="/reg" class="btn btn-primary text-white py-3 px-4"> Add your Blog</a>   
           </div>
         </div>
       </div>

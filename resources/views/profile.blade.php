@@ -381,6 +381,21 @@ ul.summary-list > li:last-child  {
 .activity-desk .album a:last-child{
     margin-right: 0px;
 }
+
+    .nav {
+    display: flex;
+    
+    flex-wrap: wrap;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    flex-direction: column;
+}
+.list-group-item.active {
+    color: #161515;
+    border: 1px solid #efba6c;
+    background: #f3d09c45;
+}
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container bootstrap snippets bootdey">
@@ -394,113 +409,68 @@ ul.summary-list > li:last-child  {
               <h1>Camila Smith</h1>
               <p>deydey@theEmail.com</p>
           </div>
-<style>
-    .nav {
-    display: flex;
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item  list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><span class="fa fa-user"></span> Personal Information</a>
     
-    flex-wrap: wrap;
-    padding-left: 0px;
-    margin-bottom: 0px;
-    list-style: none;
-    flex-direction: column;
-}
-</style>
-          <ul class="nav nav-pills nav-stacked">
-              <li class="list-group-item-action active" id="list-home-list" data-toggle="list" href="#profile" role="tab" aria-controls="profile">  <i class="fa fa-user"></i> Profile</a></li>
-              <li class="list-group-item-action " id="list-book-list" data-toggle="list" href="#book" role="tab" aria-controls="book"> <i class="fa fa-calendar"></i> Booking history <span class="label label-warning pull-right r-activity">9</span></a></li>
-              <li class="list-group-item-action" id="list-wallet-list" data-toggle="list" href="#wallet" role="tab" aria-controls="wallet"> <i class="fa fa-money"></i>My wallet  </a></li>
-              <li class="list-group-item-action " id="list-edit-list" data-toggle="list" href="#edit" role="tab" aria-controls="edit"><i class= "fa fa-edit" ></i> Edit profile</a></li>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><span class="fa fa-calendar"></span> Booking history</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><span class="fa fa-money"></span> My wallet</a>
+        <a class="list-group-item list-group-item-action" id="list-blog-list" data-toggle="list" href="#list-blog" role="tab" aria-controls="blog"><span class="fa fa-newspaper-o"></span> My Blogs</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="fa fa-edit"></span> Settings</a>
+      </div>
+    </div>
 
-          </ul>
-      </div>
+       </div>
+    </div>
   </div>
-  <div class="profile-info col-md-9">
-      {{-- <div class="panel">
-          <form>
-              <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
-          </form>
-          {{-- <footer class="panel-footer">
-              <button class="btn btn-warning pull-right">Post</button>
-              <ul class="nav nav-pills">
-                  <li>
-                      <a href="#"><i class="fa fa-map-marker"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-camera"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class=" fa fa-film"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-microphone"></i></a>
-                  </li>
-              </ul>
-          </footer> --}}
-      {{-- </div>  --}}
-      <div class="panel">
+      <div class="tab-content col-md-9 mt-4" id="nav-tabContent">
+        <div class="tab-pane fade " id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            {{-- <div class="panel">
        
-          <div class="bio-graph-heading">
-           
-          </div>
-          <div class="panel-body bio-graph-info m-4" >
-              <h1 class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Personal Information</h1>
-              <div class="row">
-                  <div class="bio-row">
-                      <p><span>First Name </span>: Camila</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Last Name </span>: Smith</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Country </span>: Australia</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Birthday</span>: 13 July 1983</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Occupation </span>: UI Designer</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Email </span>: jsmith@flatlab.com</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Mobile </span>: (12) 03 4567890</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Phone </span>: 88 (02) 123456</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div>
-        <div class="panel">
-       <style>
-        .bio-graph-heading1 {
-    background:#efbb6cc4 ;
-    object-fit: cover;
-    color: #fff;
-    text-align: center;
-    font-style: italic;
-    padding: 20px ;
-    border-radius: 4px 4px 0 0;
-    /* -webkit-border-radius: 4px 4px 0 0; */
-    font-size: 16px;
-    font-weight: 300;
-}
-       </style>
-            <div class="bio-graph-heading1">
-            
-        <div class="panel-body bio-graph-info m-4" >
-            <h1 id="book">Booking history</h1>
-        </div>
-            <div class="row">
+                <div class="bio-graph-heading">
+                 
                 </div>
-            </div>
+                <div class="panel-body bio-graph-info m-4" >
+                    <h1>Personal Information</h1>
+                    <div class="row">
+                        <div class="bio-row">
+                            <p><span>First Name </span>: Camila</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Last Name </span>: Smith</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Country </span>: Australia</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Birthday</span>: 13 July 1983</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Occupation </span>: UI Designer</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Email </span>: jsmith@flatlab.com</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Mobile </span>: (12) 03 4567890</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Phone </span>: 88 (02) 123456</p>
+                        </div>
+                    </div>
+               </div>
+            </div> --}}pp
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+           hello
         </div>
-        
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"> 
+    myname
+        </div>
+        <div class="tab-pane fade" id="list-blog" role="tabpanel" aria-labelledby="list-blog-list">..kk.w</div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">.q..</div>
       </div>
-  </div>
-</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
